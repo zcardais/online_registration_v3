@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+#wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+body {
+  font-family: "Lucida Bright", serif;
+}
+.containerTop {
+  border-bottom: 3px solid #2d3945;
+  text-align: center;
+}
+.logo {
+  color: white;
+  text-transform: uppercase;
+}
+.banner {
+  background: #2d3945;
+  padding: 10px;
+  text-align: center;
+}
+h2,
+h3 {
+  color: #283440;
+}
+.subtext {
+  color: #c2c5c8;
+}
+p {
+  color: #818799;
+}
+
+
+/*Layout Containers*/
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.containerForm {
+  border-top: 1px solid #2d3945;
+  margin-top: 2px;
+}
+input {
+  padding: .5em .25em;
+  text-align: right;
+  font-style: italic;
+  margin: .25em 0;
+  background: #eff0f1;
+}
