@@ -5,7 +5,7 @@ body {
   font-family: "Lucida Bright", serif;
 }
 .containerTop {
-  border-bottom: 3px solid #2d3945;
+  border-bottom: 5px solid #2d3945;
   text-align: center;
 }
 .logo {
@@ -21,14 +21,20 @@ h2,
 h3 {
   color: #283440;
 }
+.newsletter {
+  border-top: 3px solid #2d3945;
+  padding-top: 40px;
+}
 .subtext {
   color: #c2c5c8;
 }
 p {
   color: #818799;
 }
-footer {
+.copyright {
   text-align: center;
+  color:#aaafb3;
+  font-style: italic;
 }
 
 /* Layout Containers -------------------- */
@@ -39,7 +45,7 @@ footer {
   padding-right: 1em;
 }
 .containerForm {
-  border-top: 1px solid #2d3945;
+  border-top: 2px solid #2d3945;
   margin-top: 2px;
 }
 
@@ -56,12 +62,12 @@ label {
   margin-bottom: 0.5em;
   color: #788895;
 }
-input {
+input,
+textarea {
   outline: 0;
 	border: none;
 	padding: 15px;
 	border-radius: .3em;
-	/*border-bottom: 3px solid rgba(0,0,0,0.05);*/
   background: #eff0f1;
 }
 [placeholder="Required"],
@@ -72,7 +78,7 @@ input {
 input[type="text"],
 input[type="email"],
 input[type="tel"],
-input[type="textarea"],
+textarea,
 select {
 	font-size: 1em;
   color: #222222;
@@ -85,7 +91,7 @@ select {
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
-input[type="textarea"]:focus, {
+textarea:focus, {
     border: 3px solid #2d3945;
 }
 input[name='zip'] {
@@ -114,7 +120,8 @@ form > a {
 }
 input:focus,
 textarea:focus {
-  border-color: #52bab3;
+  border-color: #2d3945;
+  border: 3px solid #3d6185;
 }
 /* Media Queries -------------------- */
 
