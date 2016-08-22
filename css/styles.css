@@ -66,15 +66,15 @@ label[for=city],
 label[for=state],
 label[for=zip] {
   display: block;
-  margin-bottom: 0.4em;
+  margin-bottom: 0.8em;
   color: #788895;
 }
 label[for=html],
 label[for=css],
-label[for="javascript"],
-label[for="format-html"],
-label[for="format-text"] {
-  margin-bottom: 0.4em;
+label[for=javascript],
+label[for=format-html],
+label[for=format-text] {
+  margin-bottom: 0.8em;
   color: #788895;
 }
 input,
@@ -85,6 +85,9 @@ textarea {
 	padding: 15px;
 	border-radius: .3em;
   background: #eff0f1;
+}
+textarea {
+  resize:none;
 }
 [placeholder="Required"],
 [placeholder="Required"] {
@@ -170,10 +173,17 @@ form > a {
 
 /* Media Queries -------------------- */
 
-@media (min-width: 769px) {
+@media (min-width: 760px) {
 	.container {
-		max-width: 550px;
+		max-width: 560px;
 	}
+  [placeholder="Required"],
+  [placeholder="Required"] {
+    font-size: .85em;
+    font-style: italic;
+    padding-left: 70%;
+    color: #c2c5c8;
+  }
 }
 
 
@@ -185,7 +195,7 @@ form > a {
   [placeholder="Required"] {
     font-size: .85em;
     font-style: italic;
-    padding-left: 90%;
+    padding-left: 70%;
     color: #c2c5c8;
   }
 }
