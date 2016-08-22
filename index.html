@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Sign up for our newsletter</title>
     <meta name="viewport" content="width=device-width">
-    <link href="http://fonts.googleapis.com/css?family=Nunito:400,300" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" href="css/node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
@@ -17,7 +17,7 @@
         <p class="subtext">Get the latest news on how your code is doing right in your inbox</p>
     </div>
       <div class="container containerForm">
-        <form class='form-newsletter' action="">
+        <form class='form-newsletter' id="signup" method="post" action="#">
           <h2>Contact Information</h2>
           <label for="fullName">Full Name</label>
           <input type="text" name="fullName" placeholder="Required">
@@ -34,8 +34,9 @@
           <label for="city">City</label>
           <input type="text" name="city">
 
-          <label for="state">State </label>
-          <select name="states" value="Choose State" placeholder="Choose State">
+          <label for="state">State</label>
+          <select name="states" class="states">
+            <option value="Choose State">Choose State</option>
             <option value="Alabama">Alabama</option>
             <option value="Alaska">Alaska</option>
             <option value="Arizona">Arizona</option>
@@ -89,18 +90,18 @@
           </select>
           <label for="zip">Zip Code</label>
           <input type="text" name="zip">
+
           <h2 class="newsletter">Newsletter</h2>
           <p class="section">Select the newsletters you would like to receive</p>
-          <p><input type="checkbox" name="newsletters" value="html" checked> HTML News</p>
-          <p><input type="checkbox" name="newsletters" value="css"> CSS News</p>
-          <p><input type="checkbox" name="newsletter" value="js"> Javascript News</p>
+          <input id="html" type="checkbox" name="newsletters" value="html" checked><label for="html">HTML News</label><br>
+          <input id="css" type="checkbox" name="newsletters" value="css"><label for="css">CSS News</label><br>
+          <input id="javascript" type="checkbox" name="newsletters" value="js"><label for="javascript">Javascript News</label><br>
+
           <p class="section">Newsletter format</p>
-          <p><input type="radio" name="format" value="html" checked> HTML</p>
-          <p><input type="radio" name="format" value="text"> Plain text</p>
-          </p>
-          <p>Other topics you'd like to hear about</p>
+          <input type="radio" name="format" value="format-html"><label for="format-html">HTML</label><br>
+          <input type="radio" name="format" value="format-text"><label for="format-text">Plain text</label>
+          <p class="section">Other topics you'd like to hear about</p>
             <textarea id="message" rows="4"></textarea>
-          </p>
           <input class="btn default" type="submit" value="Sign Up" />
         </form>
       </div>
