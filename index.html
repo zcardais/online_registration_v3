@@ -16,17 +16,18 @@
         <h2>Signup for our newsletter</h2>
         <p class="subtext">Get the latest news on how your code is doing right in your inbox</p>
     </div>
+
       <div class="container containerForm">
         <form class='form-newsletter' id="signup" method="post" action="#">
           <h2>Contact Information</h2>
           <label for="fullName">Full Name</label>
-          <input type="text" id="fullName" name="user_name" placeholder="Required">
+          <input type="text" id="fullName" name="user_name" placeholder="Required" required aria-required="true" autofocus>
 
           <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="Required">
+          <input type="email" id="email" name="email" placeholder="Required" />
 
           <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone">
+          <input type="tel" id="phone" name="phone" placeholder="e.g. (980) 406-3487" title="Enter your 10-digit phone number.">
 
           <label for="address">Street Address</label>
           <input type="text" id="address" name="address">
@@ -89,7 +90,7 @@
             <option value="Wyoming">Wyoming</option>
           </select>
           <label for="zip">Zip Code</label>
-          <input type="text" id="zip" name="zip">
+          <input type="text" id="zip" name="zip" placeholder="e.g. 28211" pattern="^[0-9]{5}$" title="Enter your 5-digit zip code." />
 
           <h2 class="newsletter">Newsletter</h2>
           <p class="section">Select the newsletters you would like to receive</p>
@@ -100,9 +101,7 @@
           <p class="section">Newsletter format</p>
           <input type="radio" id="format-html" name="format" value="format-html"><label for="format-html">HTML</label><br>
           <input type="radio" id="format-text" name="format" value="format-text"><label for="format-text">Plain text</label><br>
-          <p>
-            <label for="message" class="section">Other topics you'd like to hear about
-          </p>
+          <p><label for="message" class="section">Other topics you'd like to hear about</p>
             <textarea id="message" rows="4"></textarea>
           <input class="btn default" type="submit" value="Sign Up" />
         </form>

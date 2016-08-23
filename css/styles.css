@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Cambria', serif;
 }
 .containerTop {
   border-bottom: 5px solid #2d3945;
@@ -13,7 +13,7 @@ body {
   text-transform: uppercase;
 }
 .banner {
-  background: #2d3945;
+  background: #283440;
   padding: 10px;
   text-align: center;
 }
@@ -22,7 +22,7 @@ h3 {
   color: #283440;
 }
 .newsletter {
-  border-top: 3px solid #2d3945;
+  border-top: 3px solid #283440;
   padding-top: 40px;
 }
 .subtext {
@@ -46,7 +46,7 @@ p {
   padding-right: 1em;
 }
 .containerForm {
-  border-top: 2px solid #2d3945;
+  border-top: 2px solid #283440;
   margin-top: 2px;
 }
 
@@ -92,7 +92,6 @@ textarea {
 [placeholder="Required"],
 [placeholder="Required"] {
   font-style: italic;
-  padding-left: 75%;
   color: #c2c5c8;
 }
 input[type="text"],
@@ -181,7 +180,6 @@ form > a {
   [placeholder="Required"] {
     font-size: .85em;
     font-style: italic;
-    padding-left: 70%;
     color: #c2c5c8;
   }
 }
@@ -195,7 +193,6 @@ form > a {
   [placeholder="Required"] {
     font-size: .85em;
     font-style: italic;
-    padding-left: 70%;
     color: #c2c5c8;
   }
 }
