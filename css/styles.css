@@ -1,62 +1,62 @@
-* {
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 body {
   font-family: 'Merriweather', serif;
+  color: #2E3A46;
 }
-.containerTop {
-  border-bottom: 5px solid #2d3945;
+.mainHeader {
   text-align: center;
+}
+hr.heavy {
+  border-bottom: 5px solid #2E3A46;
+  text-align: center;
+  margin-bottom: -5px;
+}
+hr.light {
+  border-top: 2px solid #2E3A46;
+  margin-bottom:2em;
 }
 .logo {
   color: white;
   text-transform: uppercase;
 }
 .banner {
-  background: #283440;
+  background: #2E3A46;
   padding: 10px;
   text-align: center;
 }
 h2,
 h3 {
-  color: #283440;
-}
-.newsletter {
-  border-top: 3px solid #283440;
-  padding-top: 40px;
+  color: #2E3A46;
 }
 .subtext {
-  color: #c2c5c8;
-}
-p {
-  color: #818799;
-}
-.copyright {
+  color: #BABEC2;
+  margin-top:-10px;
+  margin-bottom: 2em;
   text-align: center;
-  color:#aaafb3;
-  font-style: italic;
-  margin-bottom: 10em;
 }
 
 /* Layout Containers -------------------- */
 .container {
-  width: 92%;
-  margin: auto;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-.containerForm {
-  border-top: 2px solid #283440;
-  margin-top: 2px;
+  margin: 2em auto 0 auto;
 }
 
 /* Form -------------------- */
-.form-newsletter {
-  border-radius: .5em;
+form#signup {
+  max-width: 100%;
+  margin: 0 auto;
+  color: #7B8997;
+  /*margin: 10px auto;*/
+  /*padding: 10px 20px;*/
 }
+
 .section {
-  margin-top:2em;
-  margin-bottom: 1em;
+  display:block;
+  margin-top:.5em;
+  margin-bottom: .25em;
 }
 label[for=fullName],
 label[for=email],
@@ -66,16 +66,18 @@ label[for=city],
 label[for=state],
 label[for=zip] {
   display: block;
-  margin-bottom: 0.8em;
-  color: #788895;
+  margin-bottom: 8px;
+  font-weight: 100;
+  /*color: #7B8997;*/
 }
 label[for=html],
 label[for=css],
 label[for=javascript],
 label[for=format-html],
 label[for=format-text] {
+  display:block;
   margin-bottom: 0.8em;
-  color: #788895;
+  /*color: #788895;*/
 }
 input,
 select,
@@ -92,7 +94,7 @@ textarea {
 [placeholder="Required"],
 [placeholder="Required"] {
   font-style: italic;
-  color: #c2c5c8;
+  color: #C0C4C7;
 }
 ::placeholder {
   text-align: right;
@@ -103,20 +105,25 @@ textarea {
 input[type="text"],
 input[type="email"],
 input[type="tel"],
+select {
+  height: 58px;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
 select,
 textarea {
-	font-size: 1em;
-  color: #c2c5c8;
+	font-size: .9em;
+  color: #C0C4C7;
   font-weight: 300;
   width: 100%;
-  height: auto;
   margin-bottom: 1.2em;
   box-shadow: 0 1px 0 rgba(0,0,0,0.08) inset;
 }
 input:focus,
 select:focus,
 textarea:focus {
-  border: 3px solid #3d6185;
+  border: 2px solid #3d6185;
 }
 form#signup select {
   -webkit-appearance: none;
@@ -124,10 +131,9 @@ form#signup select {
   -ms-appearance: none;
   -o-appearance: none;
   appearance: none;
-  font-size: .9em;
-  background: #eff0f1 url('../images/icons_arrows.svg') no-repeat right 15px;
+  background: #eff0f1 url('../images/icons_arrows.svg') no-repeat right 20px;
   background-size: 30px 20px;
-  color: #c2c5c8;
+  color: #C0C4C7;
   padding: 15px 45px 15px 10px;
 }
 
@@ -136,11 +142,12 @@ form#signup select::-ms-expand { display:none; }
 input[name='zip'] {
   width: 50%;
 }
-form#signup input[type=checkbox],
-form#signup input[type=radio] {
+form#signup input[type="checkbox"],
+form#signup input[type="radio"] {
   width: 20px;
   margin: 0;
   padding:0;
+  background: #eff0f1;
 }
 form#signup input[type=checkbox] + label,
 form#signup input[type=radio] + label {
@@ -149,7 +156,7 @@ form#signup input[type=radio] + label {
   padding: 4px 0px 0px 27px;
   background: url('images/icons_check.svg');
   background-size: 20px 80px;
-  line-height: 16px;
+  line-height: 18px;
 }
 form#signup input[type=checkbox] + label {
   background-position: 0px 0px;
@@ -165,7 +172,7 @@ input[type="submit"] {
   padding-left: 20px;
   padding-right: 20px;
   width: 100%;
-  margin: .5em 0;
+  margin: .5em 0 2em 0;
   background: #4ebbb5;
   text-align: center;
 }
@@ -175,6 +182,14 @@ input[type="submit"]:hover {
 form > a {
   font-size: .85em;
 }
+fieldset {
+  margin-bottom: 30px;
+  padding: 0;
+  border: none;
+}
+legend {
+  margin-bottom: 1.5em;
+}
 
 /* Media Queries -------------------- */
 
@@ -182,16 +197,37 @@ form > a {
 	.container {
 		max-width: 560px;
 	}
-  [placeholder="Required "],
-  [placeholder="Required "] {
+  .col-1-3,
+  .col-2-3 {
+    display: inline-block;
+    vertical-align: baseline;
+}
+  [placeholder="Required"],
+  [placeholder="Required"] {
     font-size: .85em;
     font-style: italic;
-    color: #c2c5c8;
+    color: #C0C4C7;
+  }
+  .col-1-3 {
+    width: 33.33%;
+    /*   border: solid 1px black; */
+    height: auto;
+  }
+  .col-2-3 {
+    width: 66.66%;
+    /*   border: solid 1px red; */
+    height: auto;
+  }
+  label,
+  input {
+    margin-bottom: 1em;
+  }
+  input {
+    padding: 20px 20px 20px 10px;
   }
 }
 
-
-@media (min-width: 1024px) {
+/*@media (min-width: 1024px) {
   .container {
     max-width: 960px;
   }
@@ -200,5 +236,6 @@ form > a {
     font-size: .85em;
     font-style: italic;
     color: #c2c5c8;
+    color: #C0C4C7;
   }
-}
+}*/
